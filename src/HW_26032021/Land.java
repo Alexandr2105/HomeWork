@@ -1,8 +1,8 @@
 package HW_26032021;
 
 public class Land extends Transport {
-    private int numberWheels;
-    private int fuelConsumption;
+    protected int numberWheels;
+    protected int fuelConsumption;
 
     public Land(int power, int maxSpeed, int weight, String brand, int numberWheels, int fuelConsumption) {
         super(power, maxSpeed, weight, brand);
@@ -18,4 +18,7 @@ public class Land extends Transport {
         return fuelConsumption;
     }
 
+    @Override
+    public void characteristics() {
+    }
 }

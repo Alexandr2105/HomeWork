@@ -1,10 +1,10 @@
 package HW_26032021;
 
-public class Transport {
-    private int power;
-    private int maxSpeed;
-    private int weight;
-    private String brand;
+public abstract class Transport {
+    protected int power;
+    protected int maxSpeed;
+    protected int weight;
+    protected String brand;
 
     public Transport(int power, int maxSpeed, int weight, String brand) {
         this.power = power;
@@ -32,4 +32,6 @@ public class Transport {
     public double powerKW() {
         return getPower() * 0.74;
     }
+
+    public abstract void characteristics();
 }

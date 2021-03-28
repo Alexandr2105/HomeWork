@@ -13,10 +13,6 @@ public class Freight extends Land {
     }
 
     @Override
-    public double powerKW() {
-        return super.powerKW();
-    }
-
     public void characteristics() {
         System.out.printf("Мощность - %dл.с., Максимальная скорость - %dкм/ч, Масса - %dкг, Марка - %s, Количества колес - %d," +
                         " Расход топлива - %dл/100км, Грузоподьемность - %d т., Мощность - %.1fкВт\n", getPower(), getMaxSpeed(), getWeight(),

@@ -1,8 +1,8 @@
 package HW_26032021;
 
 public class Air extends Transport {
-    private int wingspan;
-    private int minRunwayLength;
+    protected int wingspan;
+    protected int minRunwayLength;
 
     public Air(int power, int maxSpeed, int weight, String brand, int wingspan, int minRunwayLength) {
         super(power, maxSpeed, weight, brand);
@@ -16,5 +16,9 @@ public class Air extends Transport {
 
     public int getMinRunwayLength() {
         return minRunwayLength;
+    }
+
+    @Override
+    public void characteristics() {
     }
 }

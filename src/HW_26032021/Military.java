@@ -19,17 +19,8 @@ public class Military extends Air {
     }
 
     @Override
-    public double powerKW() {
-        return super.powerKW();
-    }
-
     public void characteristics() {
-        String eject;
-        if (getEjectionSystem()) {
-            eject = "есть";
-        } else {
-            eject = "нет";
-        }
+        String eject = ejectionSystem ? "Да" : "Нет";
         System.out.printf("Мощность - %dл.с., Максимальная скорость - %dкм/ч, Масса - %dкг, Марка - %s, Размах крыльев - %dм., " +
                         "Минимальная длина взлетно-посадочной полосы для взлета - %dм, Наличие системы катапультирования - %s, " +
                         "Количество ракет на борту - %d, Мощность - %.1fкВт\n", getPower(), getMaxSpeed(), getWeight(), getBrand(), getWingspan(),

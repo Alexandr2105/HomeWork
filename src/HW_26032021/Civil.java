@@ -19,17 +19,8 @@ public class Civil extends Air {
     }
 
     @Override
-    public double powerKW() {
-        return super.powerKW();
-    }
-
     public void characteristics() {
-        String business;
-        if (getBusinessClass()) {
-            business = "да";
-        } else {
-            business = "нет";
-        }
+        String business = businessClass ? "Да" : "Нет";
         System.out.printf("Мощность - %dл.с., Максимальная скорость - %dкм/ч, Масса - %dкг, Марка - %s, Размах крыльев - %dм, " +
                         "Минимальная длина взлетно-посадочной полосы для взлета - %dм, Количество пассажиров - %d, " +
                         "Наличие бизнес-класса - %s, Мощность - %.1fкВт\n", getPower(), getMaxSpeed(), getWeight(), getBrand(), getWingspan(),
