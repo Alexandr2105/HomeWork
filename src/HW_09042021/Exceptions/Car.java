@@ -10,6 +10,7 @@ public class Car {
         this.speed = speed;
         this.price = price;
     }
+
     public Car() {
 
     }
@@ -37,13 +38,13 @@ public class Car {
     public void setPrice(int price) {
         this.price = price;
     }
-    public void start() throws CustomException{
-        int a=(int)(Math.random()*21);
-        if(a%2!=0){
-            System.out.println("Автомобиль марки "+getBrand()+" завёлся!");
-        }
-        else{
-            throw new CustomException("Автомобиль марки "+getBrand()+" не завёлся!");
+
+    public void start() throws CustomException {
+        int a = (int) (Math.random() * 21);
+        if (a % 2 != 0) {
+            System.out.println("Автомобиль марки " + getBrand() + " завёлся!");
+        } else {
+            throw new CustomException("Автомобиль марки " + getBrand() + " не завёлся!");
         }
     }
 }

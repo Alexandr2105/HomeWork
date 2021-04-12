@@ -1,6 +1,7 @@
 package HW_09042021.Enum;
 
-public enum ABC {
+public enum Alphabet {
+
     A,
     B,
     C,
