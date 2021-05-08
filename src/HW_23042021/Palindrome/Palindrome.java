@@ -12,14 +12,8 @@ public class Palindrome {
              BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\TeachMeSkills\\MyFirstJavaProject\\src\\HW_23042021\\Palindrome\\Palindrome1.txt"))) {
             String s;
             while ((s = reader.readLine()) != null) {
-                char[] chars = s.toCharArray();
-                int count = 0;
-                for (char aChar : chars) {
-                    if (aChar != chars[(chars.length - count) - 1]) {
-                        break;
-                    } else count++;
-                }
-                if (count == chars.length) {
+                StringBuilder wordSB = new StringBuilder(s);
+                if (s.compareTo(wordSB.reverse().toString()) == 0) {
                     writer.write(s + "\n");
                 }
             }

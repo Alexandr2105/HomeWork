@@ -18,7 +18,7 @@ public class Main {
                 for (String sentence : sentences) {
                     if (TextFormater.getStringPalindrome(sentence)) {
                         writer.write(sentence + "\n");
-                    } else if (TextFormater.getString(sentence) > 2 && TextFormater.getString(sentence) < 6) {
+                    } else if (TextFormater.getWordLength(sentence) > 2 && TextFormater.getWordLength(sentence) < 6) {
                         writer.write(sentence + "\n");
                     }
                 }
