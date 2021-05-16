@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE staff[
+        <!ELEMENT staff (employee*)>
+        <!ELEMENT employee (surname,name,patronymic,position,department,workExperience)>
+        <!ELEMENT surname (#PCDATA)>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT patronymic (#PCDATA)>
+        <!ELEMENT position (#PCDATA)>
+        <!ELEMENT department (#PCDATA)>
+        <!ELEMENT workExperience (#PCDATA)>
+        ]>
+<staff
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="Doctors3.xsd">
+    <employee>
+        <surname>Петров</surname>
+        <name>Петр</name>
+        <patronymic>Петрович</patronymic>
+        <position>Педиатр</position>
+        <department>Терапевтическое отделение</department>
+        <workExperience>5</workExperience>
+    </employee>
+    <employee>
+        <surname>Иванова</surname>
+        <name>Ивана</name>
+        <patronymic>Ивановна</patronymic>
+        <position>Гинеголог</position>
+        <department>Гинекологическое отделение</department>
+        <workExperience>3</workExperience>
+    </employee>
+    <employee>
+        <surname>Сидорова</surname>
+        <name>Галина</name>
+        <patronymic>Сидоровна</patronymic>
+        <position>Медсестра</position>
+        <department>Терапевтическое отделение</department>
+        <workExperience>2</workExperience>
+    </employee>
+    <employee>
+        <surname>Алексеев</surname>
+        <name>Алексей</name>
+        <patronymic>Алексеевич</patronymic>
+        <position>Хирург</position>
+        <department>Хирургическое отделение</department>
+        <workExperience>5</workExperience>
+    </employee>
+</staff>
