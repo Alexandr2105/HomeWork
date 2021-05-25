@@ -9,10 +9,6 @@ public class Date {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String s = reader.readLine();
         boolean result = s.matches("\\d{4}/\\d{2}/\\d{2}\\s\\d{2}:\\d{2}:\\d{2}");
-        if (result) {
-            System.out.println("true");
-        } else {
-            System.out.println("false");
-        }
+        System.out.println((result) ? "true" : "false");
     }
 }
