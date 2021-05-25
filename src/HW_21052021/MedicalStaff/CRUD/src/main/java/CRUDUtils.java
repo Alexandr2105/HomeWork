@@ -12,7 +12,7 @@ public class CRUDUtils {
     private static final String DELETE_DOCTOR = "DELETE FROM doctors WHERE id=?";
     private static final String GET_ALL_DOCTORS_QUERY = "SELECT * FROM doctors";
 
-    public static List<Doctor> getStudentData() {
+    public static List<Doctor> getDoctorData() {
         List<Doctor> doctors = new ArrayList<>();
 
         try (Connection connection = DBUtils.getConnection();
@@ -35,8 +35,8 @@ public class CRUDUtils {
         return doctors;
     }
 
-    public static List<Doctor> saveStudent(Doctor doctor) {
-        List<Doctor> updateDoctors = new ArrayList<>();
+    public static List<Doctor> saveDoctor(Doctor doctor) {
+        List<Doctor> doctors = new ArrayList<>();
 
         try (Connection connection = DBUtils.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_DOCTORS)) {
@@ -60,16 +60,16 @@ public class CRUDUtils {
                 int age = rs.getInt("age");
                 String position = rs.getString("position");
                 String specialization = rs.getString("specialization");
-                updateDoctors.add(new Doctor(id, name, surname, patronymic, age, position, specialization));
+                doctors.add(new Doctor(id, name, surname, patronymic, age, position, specialization));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return updateDoctors;
+        return doctors;
     }
 
     public static List<Doctor> updateDoctor(int idDoctor, String position) {
-        List<Doctor> updateDoctors = new ArrayList<>();
+        List<Doctor> doctors = new ArrayList<>();
         try (Connection connection = DBUtils.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_DOCTOR)) {
             preparedStatement.setString(1, position);
@@ -87,16 +87,16 @@ public class CRUDUtils {
                 int age = rs.getInt("age");
                 position = rs.getString("position");
                 String specialization = rs.getString("specialization");
-                updateDoctors.add(new Doctor(id, name, surname, patronymic, age, position, specialization));
+                doctors.add(new Doctor(id, name, surname, patronymic, age, position, specialization));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return updateDoctors;
+        return doctors;
     }
 
     public static List<Doctor> deleteDoctor(int doctorID) {
-        List<Doctor> updateDoctors = new ArrayList<>();
+        List<Doctor> doctors = new ArrayList<>();
         try (Connection connection = DBUtils.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(DELETE_DOCTOR)) {
             preparedStatement.setInt(1, doctorID);
@@ -113,11 +113,11 @@ public class CRUDUtils {
                 int age = rs.getInt("age");
                 String position = rs.getString("position");
                 String specialization = rs.getString("specialization");
-                updateDoctors.add(new Doctor(id, name, surname, patronymic, age, position, specialization));
+                doctors.add(new Doctor(id, name, surname, patronymic, age, position, specialization));
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-        return updateDoctors;
+        return doctors;
     }
 }
